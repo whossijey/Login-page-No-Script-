@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: rgba(74, 54, 38, 0.7); 
+            background-image:url('coffee2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .Page {
+            text-align: center;
+            background-color: #F5E6D3;
+            border-radius: 20px;
+            color: black;
+            padding: 20px;
+            margin: 20px auto;
+            width: 350px;
+            max-width: 400px;
+        }
+
+        #loginP {
+            font-weight: bold;
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #2C1810;
+        }
+
+        .userPass {
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        
+        .userPass input {
+            border: 1px solid #D4BBA7;
+            background-color: #FFF9F5;
+            border-radius: 30px;
+            padding: 10px;
+            width: 290px;
+            max-width: 400px;
+            height: 20px;
+        }
+
+        .userPass input::placeholder {
+            color: #A67B5B;
+            opacity: 0.7;
+        }
+
+        button {
+            background-color: #A67B5B;
+            border: none;
+            width: 310px;
+            height: 45px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            color: #FFF9F5;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #715138;
+            color: #FFF9F5;
+        }
+
+        button:active {
+            background-color: #8B593E;
+            color: #FFF9F5;
+        }
+
+        .RememberMe {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .RememberMe input[type="checkbox"] {
+            margin: 0;
+            width: auto;
+            height: auto;
+        }
+
+        .RememberMe label {
+            color: #2C1810;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .forgot-password a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .register a {    
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password a, .register a {
+            color: #8B593E;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="Page">
+        <h1 id="loginP">Login</h1>
+        <form>
+            <div class="userPass">
+                <input type="text" id="username" name="username" aria-label="Username" placeholder="Username">
+            </div>
+
+            <div class="userPass">
+                <input type="password" id="password" name="password" aria-label="Password" placeholder="Password">
+            </div>
+
+            <div class="remember-forgot">
+            <div class="RememberMe">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot Password</a>
+            </div>
+        </div>
+            <div id="logClick">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div class="register">
+            <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>
